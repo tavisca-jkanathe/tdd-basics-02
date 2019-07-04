@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace ConsoleCalculator
 {
@@ -12,7 +13,7 @@ public class Calculator
 		
 		private bool CheckValidInput(char key)
 		{
-		char[] validKeys = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '-', '+', 'x', '/', 's', 'c', '='};
+		char[] validKeys = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '-', '+', 'x', '/', 's', 'c', '=', 'X', 'S', 'X'};
 		if (validKeys.Contains(key))
 		{
 			return true;
@@ -69,7 +70,7 @@ public class Calculator
 					consoleValue=String.Copy(firstOperand);
                 }
             }
-            else if(operatorValue == 'x')
+            else if(operatorValue == 'x' || operatorValue == 'X')
             {
                 firstOperand = (double.Parse(firstOperand) * double.Parse(secondOperand)).ToString();
 				consoleValue=String.Copy(firstOperand);
@@ -79,15 +80,14 @@ public class Calculator
         public string SendKeyPress(char key)
         {
             // Add your implementation here.
-			key=key.ToLower();
 			if(CheckValidInput(key)== true)
 			{
-				if(key=='c')
+				if(key=='c' || key=='C')
 				{
 					ClearAll();
 					consoleValue=String.Copy(firstOperand);
 				}
-				else if(key=='s')
+				else if(key=='s' || key=='S')
 				{
 					if(operatorValue=='\0')
 					{
