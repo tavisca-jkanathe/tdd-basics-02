@@ -35,8 +35,7 @@ namespace ConsoleCalculator.Tests
             {
                 Assert.Equal("0",SolveEquation("1+2+c"));
             }
-    }
-    public string SolveEquation(string equation)
+         public string SolveEquation(string equation)
         {
             Calculator calculator = new Calculator();
             string output = "";
@@ -46,4 +45,6 @@ namespace ConsoleCalculator.Tests
             }
             return output;
         }
+    }
+   
 }
