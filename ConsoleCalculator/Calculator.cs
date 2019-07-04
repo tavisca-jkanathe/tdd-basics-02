@@ -123,7 +123,7 @@ public class Calculator
 						consoleValue=String.Copy(secondOperand);
                     }
 				}
-				else if (key == '.')
+		else if (key == '.')
                 {
                     if (operatorValue=='\0' )                   
                     {
@@ -134,7 +134,7 @@ public class Calculator
 						}
 						else
 						{
-							consoleValue="-E-";//error
+							consoleValue=String.Copy(firstOperand);
 						}
                         
                     }
@@ -154,7 +154,7 @@ public class Calculator
 							}
 							else
 							{
-								consoleValue="-E-";//error
+								consoleValue=String.Copy(secondOperand);
 							}
                         }
                     }
