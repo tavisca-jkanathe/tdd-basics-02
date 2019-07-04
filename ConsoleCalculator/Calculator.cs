@@ -6,7 +6,7 @@ public class Calculator
 		char operatorValue='\0';
 		bool decimalKey=false;
 		
-		private bool CheckValidInput(key)
+		private bool CheckValidInput(char key)
 		{
 		char[] validKeys = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '-', '+', 'x', '/', 's', 'c', '='};
 		if (validKeys.Contains(key))
@@ -19,7 +19,7 @@ public class Calculator
 		}
 		}
 		
-		private bool CheckValidOperator(key)
+		private bool CheckValidOperator(char key)
 		{
 		char[] validKeys = {'/', '-', '+', 'x'};
 		if (validKeys.Contains(key))
