@@ -35,6 +35,23 @@ namespace ConsoleCalculator.Tests
             {
                 Assert.Equal("0",SolveEquation("1+2+c"));
             }
+         [Fact]
+            public void MultiplicationTest()
+            {
+                Assert.Equal("20",Evaluation("5x2X2="));
+            }
+
+            [Fact]
+            public void TogglingTest()
+            {
+                Assert.Equal("8",Evaluation("10+2S="));
+            }
+
+            [Fact]
+            public void ComplexOperationTest()
+            {
+                Assert.Equal("6",Evaluation("1+2+3+"));
+            }
          public string SolveEquation(string equation)
         {
             Calculator calculator = new Calculator();
