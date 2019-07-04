@@ -26,7 +26,7 @@ public class Calculator
 		
 		private bool CheckValidOperator(char key)
 		{
-		char[] validKeys = {'/', '-', '+', 'x'};
+		char[] validKeys = {'/', '-', '+', 'x','X'};
 		if (validKeys.Contains(key))
 		{
 			return true;
