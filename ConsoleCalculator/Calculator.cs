@@ -3,7 +3,7 @@ public class Calculator
 		string  secondOperand="";
 		string firstOperand="0";
 		string consoleValue="0";
-		char operatorValue='';
+		char operatorValue='\0';
 		bool decimalKey=false;
 		
 		private bool CheckValidInput(key)
@@ -37,7 +37,7 @@ public class Calculator
 			secondOperand="";
 			firstOperand="0";
 			consoleValue="0";
-			operatorValue='';
+			operatorValue='\0';
 			decimalKey=false;
 		}
 		
@@ -85,7 +85,7 @@ public class Calculator
 				}
 				else if(key=='s')
 				{
-					if(operatorValue=='')
+					if(operatorValue=='\0')
 					{
 						double changeSign=-1 * double.Parse(firstOperand);
 						firstOperand=changeSign.ToString();
@@ -102,7 +102,7 @@ public class Calculator
 				else if(Char.IsDigit(key))
 				{
 					
-					if (operatorValue=='')             
+					if (operatorValue=='\0')             
                     {
                         if ((firstOperand == "0" && key == '0')==false)
                         {
@@ -121,7 +121,7 @@ public class Calculator
 				}
 				else if (key == '.')
                 {
-                    if (operatorValue=='' )                   
+                    if (operatorValue=='\0' )                   
                     {
                         if(firstOperand.Contains('.')==false)
 						{
@@ -157,7 +157,7 @@ public class Calculator
                 }
 				else if (CheckValidOperator(key))
                 {
-                    if (operatorValue!='')
+                    if (operatorValue!='\0')
                     {
                         DoCalculation();
                         secondNumber = "";
@@ -167,7 +167,7 @@ public class Calculator
 				else if (key == '=')
                 {
                     DoCalculation();
-                    operatorValue='';
+                    operatorValue='\0';
                 }
 				
 			}
