@@ -16,22 +16,22 @@ namespace ConsoleCalculator.Tests
                 Assert.Equal("12",SolveEquation("10+2="));
             }
          [Fact]
-            public void BasicOperationTest()
+            public void InvalidOperationTest()
             {
                 Assert.Equal("-E-",SolveEquation("10/0="));
             }
          [Fact]
-            public void BasicOperationTest()
+            public void MultipleZeroOperationTest3()
             {
                 Assert.Equal("0.001",SolveEquation("00..001"));
             }
         [Fact]
-            public void BasicOperationTest()
+            public void ToggleSignOperationTest()
             {
                 Assert.Equal("10",SolveEquation("12+2sss="));
             }
          [Fact]
-            public void BasicOperationTest()
+            public void ResetOperationTest()
             {
                 Assert.Equal("0",SolveEquation("1+2+c"));
             }
