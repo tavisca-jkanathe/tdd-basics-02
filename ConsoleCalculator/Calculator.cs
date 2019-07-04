@@ -57,7 +57,7 @@ public class Calculator
                 firstOperand = (double.Parse(firstOperand) - double.Parse(secondOperand)).ToString();
 				consoleValue=String.Copy(firstOperand);
             }
-            else if(operation == '/')
+            else if(operatorValue == '/')
             {
                 if(secondOperand == "0")
                 {
@@ -65,13 +65,13 @@ public class Calculator
                 }
                 else
                 {
-                    firstNumber = (double.Parse(firstNumber) / double.Parse(secondOperand)).ToString();
+                    firstOperand = (double.Parse(firstOperand) / double.Parse(secondOperand)).ToString();
 					consoleValue=String.Copy(firstOperand);
                 }
             }
-            else if(operation == 'x')
+            else if(operatorValue == 'x')
             {
-                firstNumber = (double.Parse(firstNumber) * double.Parse(secondOperand)).ToString();
+                firstOperand = (double.Parse(firstOperand) * double.Parse(secondOperand)).ToString();
 				consoleValue=String.Copy(firstOperand);
             }
         }
@@ -164,7 +164,7 @@ public class Calculator
                     if (operatorValue!='\0')
                     {
                         DoCalculation();
-                        secondNumber = "";
+                        secondOperand = "";
                     }
                     operatorValue = key;
                 }
