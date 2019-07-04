@@ -1,3 +1,7 @@
+using System;
+
+namespace ConsoleCalculator
+{
 public class Calculator
     {
 		string  secondOperand="";
@@ -179,3 +183,4 @@ public class Calculator
 			
         }
     }
+}
