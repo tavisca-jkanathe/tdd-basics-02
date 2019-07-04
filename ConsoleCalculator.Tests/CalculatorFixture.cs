@@ -38,19 +38,19 @@ namespace ConsoleCalculator.Tests
          [Fact]
             public void MultiplicationTest()
             {
-                Assert.Equal("20",Evaluation("5x2X2="));
+                Assert.Equal("20",SolveEquation("5x2X2="));
             }
 
             [Fact]
             public void TogglingTest()
             {
-                Assert.Equal("8",Evaluation("10+2S="));
+                Assert.Equal("8",SolveEquation("10+2S="));
             }
 
             [Fact]
             public void ComplexOperationTest()
             {
-                Assert.Equal("6",Evaluation("1+2+3+"));
+                Assert.Equal("6",SolveEquation("1+2+3+"));
             }
          public string SolveEquation(string equation)
         {
